@@ -1,74 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Perfil do Sulista_041</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do Sulista_041</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-            body {
-                font-family: "Poppins", sans-serif;
-                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-                min-height: 100vh;
-                color: #fff;
-            }
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
 
-            .profile-card {
-                backdrop-filter: blur(16px) saturate(180%);
-                -webkit-backdrop-filter: blur(16px) saturate(180%);
-                background-color: rgba(17, 25, 40, 0.75);
-                border: 1px solid rgba(255, 255, 255, 0.125);
-                transition: all 0.3s ease;
-            }
+        /* Efeito Blob para o fundo */
+        .blob {
+            position: absolute;
+            z-index: 0;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0ea5e9, #6366f1);
+            opacity: 0.15;
+            filter: blur(60px);
+            animation: blob-bounce 15s infinite ease;
+        }
 
-            .profile-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            }
+        .blob:nth-child(2) {
+            background: linear-gradient(45deg, #ec4899, #8b5cf6);
+            animation-delay: -5s;
+            width: 400px;
+            height: 400px;
+            opacity: 0.1;
+        }
 
-            .badge-dev {
-                background: linear-gradient(90deg, #38b2ac 0%, #319795 100%);
-            }
+        .blob:nth-child(3) {
+            background: linear-gradient(45deg, #10b981, #3b82f6);
+            animation-delay: -10s;
+            width: 350px;
+            height: 350px;
+            opacity: 0.1;
+        }
 
-            .social-icon {
-                transition: all 0.3s ease;
+        @keyframes blob-bounce {
+            0% {
+                transform: translate(10%, 10%) scale(1);
             }
+            33% {
+                transform: translate(90%, 50%) scale(1.1);
+            }
+            66% {
+                transform: translate(50%, 90%) scale(0.9);
+            }
+            100% {
+                transform: translate(10%, 10%) scale(1);
+            }
+        }
 
-            .social-icon:hover {
-                transform: scale(1.2);
-            }
+        /* Seu conteúdo fica por cima */
+        .container {
+            position: relative;
+            z-index: 10;
+        }
 
-            .music-player {
-                background: rgba(0, 0, 0, 0.3);
-            }
+        /* Seus estilos existentes */
+        .profile-card {
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(17, 25, 40, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            transition: all 0.3s ease;
+        }
 
-            .progress-bar {
-                height: 4px;
-                background: rgba(255, 255, 255, 0.2);
-            }
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
 
-            .progress {
-                height: 100%;
-                background: linear-gradient(90deg, #4299e1 0%, #3182ce 100%);
-                width: 0;
-                transition: width 0.1s linear;
-            }
+        .badge-dev {
+            background: linear-gradient(90deg, #38b2ac 0%, #319795 100%);
+        }
 
-            .profile-img {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 3px solid rgba(255, 255, 255, 0.2);
-                margin-bottom: 1rem;
-            }
-        </style>
-    </head>
-    <body class="flex items-center justify-center p-4">
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .music-player {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #4299e1 0%, #3182ce 100%);
+            width: 0;
+            transition: width 0.1s linear;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4">
+    <!-- Blobs animados de fundo -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+
+    <!-- Seu conteúdo (container adicionado) -->
+    <div class="container">
         <div class="profile-card w-full max-w-md rounded-2xl overflow-hidden p-8">
             <div class="flex justify-center">
                 <img src="https://i.ibb.co/wNkzzJNM/30f9976fbe2c2bc91f09d63b656271d9.jpg" alt="Foto de perfil do sulista_041" class="profile-img" />
@@ -106,7 +166,7 @@
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-chevron-right text-xs text-gray-400 mr-2"></i>
-                        <span>OS PIA SAMP 👑‘‘</span>
+                        <span>OS PIA SAMP 👑</span>
                     </li>
                 </ul>
             </div>
