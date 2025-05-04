@@ -1,0 +1,36 @@
+/* Reset básico para evitar conflitos */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif; /* Usando a fonte do seu HTML */
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Estilo da imagem arrastável (compatível com seu HTML) */
+#draggable-img {
+  cursor: grab;
+  transition: transform 0.1s ease;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+#draggable-img:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+}
+
+/* Se quiser manter a classe .card (opcional) */
+.card {
+  background-color: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
