@@ -71,7 +71,7 @@
     <body class="flex items-center justify-center p-4">
         <div class="profile-card w-full max-w-md rounded-2xl overflow-hidden p-8">
             <div class="flex justify-center">
-                <img src="https://i.ibb.co/wNkzzJNM/30f9976fbe2c2bc91f09d63b656271d9.jpg" alt="Foto de perfil do sulista_041" class="profile-img" id="draggable-img" />
+                <img src="https://i.ibb.co/wNkzzJNM/30f9976fbe2c2bc91f09d63b656271d9.jpg" alt="Foto de perfil do sulista_041" class="profile-img" />
             </div>
 
             <div class="flex items-center justify-center mb-6">
@@ -86,7 +86,7 @@
                 </div>
                 <div class="flex items-center mb-2">
                     <i class="fas fa-map-marker-alt text-red-400 mr-2"></i>
-                    <span>Região Sul do Brasil</span>
+                    <span>RegiÃ£o Sul do Brasil</span>
                 </div>
                 <div class="flex items-center">
                     <i class="fas fa-gamepad text-purple-400 mr-2"></i>
@@ -102,11 +102,11 @@
                 <ul class="space-y-2">
                     <li class="flex items-center">
                         <i class="fas fa-chevron-right text-xs text-gray-400 mr-2"></i>
-                        <span>MACONHEIROS MENU 🍁</span>
+                        <span>MACONHEIROS MENU ðŸ</span>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-chevron-right text-xs text-gray-400 mr-2"></i>
-                        <span>OS PIA SAMP 👑</span>
+                        <span>OS PIA SAMP ðŸ‘‘</span>
                     </li>
                 </ul>
             </div>
@@ -122,10 +122,10 @@
 
             <div class="music-player rounded-xl p-4">
                 <div class="flex items-center mb-3">
-                    <img src="https://i.scdn.co/image/ab67616d0000b273a2eec11860faa68906e8e9c1" alt="Capa do Álbum" class="w-12 h-12 rounded mr-3" />
+                    <img src="https://i.scdn.co/image/ab67616d0000b273a2eec11860faa68906e8e9c1" alt="Capa do Ãlbum" class="w-12 h-12 rounded mr-3" />
                     <div class="flex-1">
                         <h3 class="font-medium">MC Kevin</h3>
-                        <p class="text-sm text-gray-300">Cavalo de Tróia</p>
+                        <p class="text-sm text-gray-300">Cavalo de TrÃ³ia</p>
                     </div>
                     <button id="playPauseBtn" class="text-white bg-blue-500 hover:bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
                         <i class="fas fa-pause"></i>
@@ -143,14 +143,14 @@
 
                 <audio id="audioPlayer" autoplay>
                     <source src="http://som.brasilplaygames.com.br/som/MC Kevin anonimato.mp3" type="audio/mpeg" />
-                    Seu navegador não suporta o elemento de áudio.
+                    Seu navegador nÃ£o suporta o elemento de Ã¡udio.
                 </audio>
             </div>
         </div>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                // Player de música (código original)
+                // Player de mÃºsica (cÃ³digo original)
                 const audioPlayer = document.getElementById("audioPlayer");
                 const playPauseBtn = document.getElementById("playPauseBtn");
                 const progress = document.getElementById("progress");
@@ -202,35 +202,6 @@
                         playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
                     });
                 }, 500);
-
-                // Código para arrastar a imagem (novo)
-                const img = document.getElementById('draggable-img');
-                let isDragging = false;
-                let offsetX, offsetY;
-
-                img.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    offsetX = e.clientX - img.getBoundingClientRect().left;
-                    offsetY = e.clientY - img.getBoundingClientRect().top;
-                    img.style.position = 'absolute';
-                });
-
-                document.addEventListener('mousemove', (e) => {
-                    if (!isDragging) return;
-                    img.style.left = (e.clientX - offsetX) + 'px';
-                    img.style.top = (e.clientY - offsetY) + 'px';
-                });
-
-                document.addEventListener('mouseup', () => {
-                    isDragging = false;
-                });
-
-                // Bônus: Resetar posição com duplo clique (opcional)
-                img.addEventListener('dblclick', () => {
-                    img.style.position = 'static';
-                    img.style.left = 'auto';
-                    img.style.top = 'auto';
-                });
             });
         </script>
     </body>
