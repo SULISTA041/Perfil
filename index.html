@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Perfil do Sulista_041 - Desenvolvedor de mods Lua para SAMP" />
         <title>Perfil do Sulista_041</title>
         <link rel="stylesheet" href="styles.css" />
         <script src="https://cdn.tailwindcss.com"></script>
@@ -50,7 +49,6 @@
             .progress-bar {
                 height: 4px;
                 background: rgba(255, 255, 255, 0.2);
-                cursor: pointer;
             }
 
             .progress {
@@ -68,26 +66,12 @@
                 border: 3px solid rgba(255, 255, 255, 0.2);
                 margin-bottom: 1rem;
             }
-
-            /* Responsividade */
-            @media (max-width: 480px) {
-                .profile-card {
-                    padding: 1.5rem;
-                }
-                
-                .profile-img {
-                    width: 80px;
-                    height: 80px;
-                }
-            }
         </style>
     </head>
     <body class="flex items-center justify-center p-4">
         <div class="profile-card w-full max-w-md rounded-2xl overflow-hidden p-8">
             <div class="flex justify-center">
-                <img src="https://i.ibb.co/wNkzzJNM/30f9976fbe2c2bc91f09d63b656271d9.jpg" 
-                     alt="Foto de perfil do sulista_041" 
-                     class="profile-img" />
+                <img src="https://i.ibb.co/wNkzzJNM/30f9976fbe2c2bc91f09d63b656271d9.jpg" alt="Foto de perfil do sulista_041" class="profile-img" />
             </div>
 
             <div class="flex items-center justify-center mb-6">
@@ -97,48 +81,54 @@
 
             <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4 mb-6">
                 <div class="flex items-center mb-2">
-                    <i class="fas fa-code text-blue-400 mr-2" aria-hidden="true"></i>
+                    <i class="fas fa-code text-blue-400 mr-2"></i>
                     <span>Desenvolvedor mods Lua</span>
                 </div>
                 <div class="flex items-center mb-2">
-                    <i class="fas fa-map-marker-alt text-red-400 mr-2" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt text-red-400 mr-2"></i>
                     <span>Região Sul do Brasil</span>
                 </div>
                 <div class="flex items-center">
-                    <i class="fas fa-gamepad text-purple-400 mr-2" aria-hidden="true"></i>
-                    <span>Desenvolvendo mods menus mobile para samp</span>
+                    <i class="fas fa-gamepad text-purple-400 mr-2"></i>
+                    <span>Desenvolvendo mod menu .lua para samp mobile</span>
                 </div>
+            </div>
+            
+            <!-- Nova seção de projetos -->
+            <div class="mt-6 bg-gray-800 bg-opacity-50 rounded-lg p-4">
+                <h2 class="text-lg font-semibold mb-3 flex items-center">
+                    <i class="fas fa-project-diagram text-blue-400 mr-2"></i>
+                    Projetos Recentes
+                </h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-chevron-right text-xs text-gray-400 mr-2"></i>
+                        <span>MACONHEIROS MENU V1</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-chevron-right text-xs text-gray-400 mr-2"></i>
+                        <span>OS PIA SAMP</span>
+                    </li>
+                </ul>
             </div>
 
             <div class="flex justify-center space-x-4 mb-8">
-                <a href="https://youtube.com/@sulista_samp" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-icon text-red-500 hover:text-red-400 text-2xl"
-                   aria-label="Canal no YouTube">
+                <a href="https://youtube.com/@sulista_samp" target="_blank" class="social-icon text-red-500 hover:text-red-400 text-2xl">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="https://discord.gg/nSZjUwvaXV" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="social-icon text-indigo-400 hover:text-indigo-300 text-2xl"
-                   aria-label="Servidor no Discord">
+                <a href="https://discord.gg/nSZjUwvaXV" target="_blank" class="social-icon text-indigo-400 hover:text-indigo-300 text-2xl">
                     <i class="fab fa-discord"></i>
                 </a>
             </div>
 
             <div class="music-player rounded-xl p-4">
                 <div class="flex items-center mb-3">
-                    <img src="https://i.scdn.co/image/ab67616d0000b273a2eec11860faa68906e8e9c1" 
-                         alt="Capa do Álbum Cavalo de Tróia de MC Kevin" 
-                         class="w-12 h-12 rounded mr-3" />
+                    <img src="https://i.scdn.co/image/ab67616d0000b273a2eec11860faa68906e8e9c1" alt="Capa do Álbum" class="w-12 h-12 rounded mr-3" />
                     <div class="flex-1">
                         <h3 class="font-medium">MC Kevin</h3>
                         <p class="text-sm text-gray-300">Cavalo de Tróia</p>
                     </div>
-                    <button id="playPauseBtn" 
-                            class="text-white bg-blue-500 hover:bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center"
-                            aria-label="Reproduzir/Pausar">
+                    <button id="playPauseBtn" class="text-white bg-blue-500 hover:bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
                         <i class="fas fa-pause"></i>
                     </button>
                 </div>
@@ -152,28 +142,10 @@
                     <span id="duration">3:45</span>
                 </div>
 
-                <audio id="audioPlayer">
+                <audio id="audioPlayer" autoplay>
                     <source src="http://som.brasilplaygames.com.br/som/MC Kevin anonimato.mp3" type="audio/mpeg" />
                     Seu navegador não suporta o elemento de áudio.
                 </audio>
-            </div>
-            
-            <!-- Nova seção de projetos -->
-            <div class="mt-6 bg-gray-800 bg-opacity-50 rounded-lg p-4">
-                <h2 class="text-lg font-semibold mb-3 flex items-center">
-                    <i class="fas fa-project-diagram text-blue-400 mr-2"></i>
-                    Projetos Recentes
-                </h2>
-                <ul class="space-y-2">
-                    <li class="flex items-center">
-                        <i class="fas fa-chevron-right text-xs text-gray-400 mr-2"></i>
-                        <span>Menu Mobile para SAMP</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-chevron-right text-xs text-gray-400 mr-2"></i>
-                        <span>Mod de Carros Personalizados</span>
-                    </li>
-                </ul>
             </div>
         </div>
 
@@ -185,44 +157,12 @@
                 const currentTime = document.getElementById("currentTime");
                 const duration = document.getElementById("duration");
 
-                // Tentar reproduzir automaticamente após interação do usuário
-                function handleFirstInteraction() {
-                    // Verificar se já não está tocando
-                    if (audioPlayer.paused) {
-                        audioPlayer.play().then(() => {
-                            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                        }).catch(e => {
-                            console.log("Reprodução automática não permitida:", e);
-                        });
-                    }
-                    
-                    // Remover este listener após a primeira interação
-                    document.removeEventListener('click', handleFirstInteraction);
-                    document.removeEventListener('keydown', handleFirstInteraction);
-                    document.removeEventListener('touchstart', handleFirstInteraction);
-                }
-
-                // Adicionar listeners para vários tipos de interação
-                document.addEventListener('click', handleFirstInteraction);
-                document.addEventListener('keydown', handleFirstInteraction);
-                document.addEventListener('touchstart', handleFirstInteraction);
-
-                // Atualizar duração quando os metadados estiverem disponíveis
-                audioPlayer.addEventListener('loadedmetadata', function() {
-                    if (audioPlayer.duration !== Infinity && !isNaN(audioPlayer.duration)) {
-                        const durMinutes = Math.floor(audioPlayer.duration / 60);
-                        const durSeconds = Math.floor(audioPlayer.duration % 60);
-                        duration.textContent = durMinutes + ":" + (durSeconds < 10 ? "0" + durSeconds : durSeconds);
-                    }
-                });
+                duration.textContent = "3:45";
 
                 playPauseBtn.addEventListener("click", function () {
                     if (audioPlayer.paused) {
-                        audioPlayer.play().then(() => {
-                            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                        }).catch(e => {
-                            console.log("Erro ao reproduzir:", e);
-                        });
+                        audioPlayer.play();
+                        playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
                     } else {
                         audioPlayer.pause();
                         playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
@@ -236,6 +176,12 @@
                     const minutes = Math.floor(audioPlayer.currentTime / 60);
                     const seconds = Math.floor(audioPlayer.currentTime % 60);
                     currentTime.textContent = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+
+                    if (audioPlayer.duration !== Infinity && !isNaN(audioPlayer.duration)) {
+                        const durMinutes = Math.floor(audioPlayer.duration / 60);
+                        const durSeconds = Math.floor(audioPlayer.duration % 60);
+                        duration.textContent = durMinutes + ":" + (durSeconds < 10 ? "0" + durSeconds : durSeconds);
+                    }
                 });
 
                 const progressBar = document.querySelector(".progress-bar");
@@ -250,12 +196,12 @@
                     currentTime.textContent = "0:00";
                 });
 
-                // Tratamento de erro
-                audioPlayer.addEventListener('error', function() {
-                    console.error("Erro ao carregar o áudio:", audioPlayer.error);
-                    playPauseBtn.disabled = true;
-                    playPauseBtn.classList.add('opacity-50');
-                });
+                setTimeout(() => {
+                    audioPlayer.play().catch((e) => {
+                        console.log("Autoplay prevented. Please interact with the page to play audio.");
+                        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    });
+                }, 500);
             });
         </script>
     </body>
