@@ -1,229 +1,190 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Sulista_041</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-            color: #fff;
-        }
-        
-        .profile-card {
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
-            background-color: rgba(17, 25, 40, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.125);
-            transition: all 0.3s ease;
-        }
-        
-        .profile-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .badge-dev {
-            background: linear-gradient(90deg, #38b2ac 0%, #319795 100%);
-        }
-        
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            transform: scale(1.2);
-        }
-        
-        .music-player {
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        .progress-bar {
-            height: 4px;
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
-        .progress {
-            height: 100%;
-            background: linear-gradient(90deg, #4299e1 0%, #3182ce 100%);
-            width: 0;
-            transition: width 0.1s linear;
-        }
-        
-        .avatar-border {
-            border: 3px solid transparent;
-            background: linear-gradient(45deg, #4299e1, #9f7aea, #ed64a6) border-box;
-            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: destination-out;
-            mask-composite: exclude;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Perfil do Sulista_041</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-        .avatar-container {
-            position: relative;
-            width: 128px;
-            height: 128px;
-        }
+            body {
+                font-family: "Poppins", sans-serif;
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                min-height: 100vh;
+                color: #fff;
+            }
 
-        .avatar-fallback {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-size: 48px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body class="flex items-center justify-center p-4">
-    <div class="profile-card w-full max-w-md rounded-2xl overflow-hidden p-8">
-        <!-- Avatar Section - Improved Version -->
-        <div class="flex justify-center mb-6">
-            <div class="avatar-border rounded-full p-1">
-                <div class="avatar-container rounded-full">
-                    <img src="https://i.ibb.co/vC5Z3SwR/30f9976fbe2c2bc91f09d63b656271d9.jpg" 
-                         alt="Avatar do Sulista_041" 
-                         class="w-full h-full rounded-full object-cover"
-                         onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'avatar-fallback rounded-full\'>S</div>'">
+            .profile-card {
+                backdrop-filter: blur(16px) saturate(180%);
+                -webkit-backdrop-filter: blur(16px) saturate(180%);
+                background-color: rgba(17, 25, 40, 0.75);
+                border: 1px solid rgba(255, 255, 255, 0.125);
+                transition: all 0.3s ease;
+            }
+
+            .profile-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .badge-dev {
+                background: linear-gradient(90deg, #38b2ac 0%, #319795 100%);
+            }
+
+            .social-icon {
+                transition: all 0.3s ease;
+            }
+
+            .social-icon:hover {
+                transform: scale(1.2);
+            }
+
+            .music-player {
+                background: rgba(0, 0, 0, 0.3);
+            }
+
+            .progress-bar {
+                height: 4px;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            .progress {
+                height: 100%;
+                background: linear-gradient(90deg, #4299e1 0%, #3182ce 100%);
+                width: 0;
+                transition: width 0.1s linear;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid rgba(255, 255, 255, 0.2);
+                margin-bottom: 1rem;
+            }
+        </style>
+    </head>
+    <body class="flex items-center justify-center p-4">
+        <div class="profile-card w-full max-w-md rounded-2xl overflow-hidden p-8">
+            <div class="flex justify-center">
+                <img src="https://i.ibb.co/SXMc3jW2/f61d09e2fc8b17e42b822c313abfb266.jpg" alt="Foto de perfil do sulista_041" class="profile-img" />
+            </div>
+
+            <div class="flex items-center justify-center mb-6">
+                <h1 class="text-2xl font-bold mr-2">sulista_041</h1>
+                <span class="badge-dev text-xs font-semibold px-2 py-1 rounded-full">Dev</span>
+            </div>
+
+            <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4 mb-6">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-code text-blue-400 mr-2"></i>
+                    <span>Desenvolvedor em Lua</span>
+                </div>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-map-marker-alt text-red-400 mr-2"></i>
+                    <span>Região Sul do Brasil</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-gamepad text-purple-400 mr-2"></i>
+                    <span>Desenvolvendo Mods Menus Mobile</span>
                 </div>
             </div>
-        </div>
-        
-        <!-- Name and Badge -->
-        <div class="flex items-center justify-center mb-6">
-            <h1 class="text-2xl font-bold mr-2">sulista_041</h1>
-            <span class="badge-dev text-xs font-semibold px-2 py-1 rounded-full">Dev</span>
-        </div>
-        
-        <!-- About Me -->
-        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4 mb-6">
-            <div class="flex items-center mb-2">
-                <i class="fas fa-code text-blue-400 mr-2"></i>
-                <span>Desenvolvedor: Lua</span>
-            </div>
-            <div class="flex items-center mb-2">
-                <i class="fas fa-map-marker-alt text-red-400 mr-2"></i>
-                <span>Região: Sul do Brasil</span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-gamepad text-purple-400 mr-2"></i>
-                <span>Criador: mod menu samp mobile</span>
-            </div>
-        </div>
-        
-        <!-- Social Links -->
-        <div class="flex justify-center space-x-4 mb-8">
-            <a href="https://youtube.com/@sulista_samp" target="_blank" class="social-icon text-red-500 hover:text-red-400 text-2xl">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://discord.gg/nSZjUwvaXV" target="_blank" class="social-icon text-indigo-400 hover:text-indigo-300 text-2xl">
-                <i class="fab fa-discord"></i>
-            </a>
-        </div>
-        
-        <!-- Music Player -->
-        <div class="music-player rounded-xl p-4">
-            <div class="flex items-center mb-3">
-                <img src="https://i.ibb.co/SXMc3jW2/f61d09e2fc8b17e42b822c313abfb266.jpg" 
-                     alt="Capa do Álbum" 
-                     class="w-12 h-12 rounded mr-3">
-                <div class="flex-1">
-                    <h3 class="font-medium">MC Kevin</h3>
-                    <p class="text-sm text-gray-300">Cavalo de Tróia</p>
-                </div>
-                <button id="playPauseBtn" class="text-white bg-blue-500 hover:bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
-                    <i class="fas fa-pause"></i>
-                </button>
-            </div>
-            
-            <div class="progress-bar rounded-full mb-2">
-                <div id="progress" class="progress rounded-full"></div>
-            </div>
-            
-            <div class="flex justify-between text-xs text-gray-400">
-                <span id="currentTime">0:00</span>
-                <span id="duration">3:45</span>
-            </div>
-            
-            <audio id="audioPlayer" autoplay>
-                <source src="http://som.brasilplaygames.com.br/som/MC Kevin anonimato.mp3" type="audio/mpeg">
-                Seu navegador não suporta o elemento de áudio.
-            </audio>
-        </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const audioPlayer = document.getElementById('audioPlayer');
-            const playPauseBtn = document.getElementById('playPauseBtn');
-            const progress = document.getElementById('progress');
-            const currentTime = document.getElementById('currentTime');
-            const duration = document.getElementById('duration');
-            
-            // Set fake duration (since we can't get real duration until metadata loads)
-            duration.textContent = '3:45';
-            
-            // Play/Pause button
-            playPauseBtn.addEventListener('click', function() {
-                if (audioPlayer.paused) {
-                    audioPlayer.play();
-                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                } else {
-                    audioPlayer.pause();
-                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-                }
-            });
-            
-            // Update progress bar
-            audioPlayer.addEventListener('timeupdate', function() {
-                const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-                progress.style.width = percent + '%';
-                
-                // Update current time display
-                const minutes = Math.floor(audioPlayer.currentTime / 60);
-                const seconds = Math.floor(audioPlayer.currentTime % 60);
-                currentTime.textContent = minutes + ':' + (seconds < 10 ? '0' + seconds : seconds);
-                
-                // Update duration if available
-                if (audioPlayer.duration !== Infinity && !isNaN(audioPlayer.duration)) {
-                    const durMinutes = Math.floor(audioPlayer.duration / 60);
-                    const durSeconds = Math.floor(audioPlayer.duration % 60);
-                    duration.textContent = durMinutes + ':' + (durSeconds < 10 ? '0' + durSeconds : durSeconds);
-                }
-            });
-            
-            // Click on progress bar to seek
-            const progressBar = document.querySelector('.progress-bar');
-            progressBar.addEventListener('click', function(e) {
-                const percent = e.offsetX / this.offsetWidth;
-                audioPlayer.currentTime = percent * audioPlayer.duration;
-            });
-            
-            // When song ends
-            audioPlayer.addEventListener('ended', function() {
-                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-                progress.style.width = '0%';
-                currentTime.textContent = '0:00';
-            });
-            
-            // Auto-play the music (with a small delay to ensure it works)
-            setTimeout(() => {
-                audioPlayer.play().catch(e => {
-                    console.log("Autoplay prevented. Please interact with the page to play audio.");
-                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            <div class="flex justify-center space-x-4 mb-8">
+                <a href="https://youtube.com/@sulista_samp" target="_blank" class="social-icon text-red-500 hover:text-red-400 text-2xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://discord.gg/nSZjUwvaXV" target="_blank" class="social-icon text-indigo-400 hover:text-indigo-300 text-2xl">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+
+            <div class="music-player rounded-xl p-4">
+                <div class="flex items-center mb-3">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273a2eec11860faa68906e8e9c1" alt="Capa do Álbum" class="w-12 h-12 rounded mr-3" />
+                    <div class="flex-1">
+                        <h3 class="font-medium">MC Kevin</h3>
+                        <p class="text-sm text-gray-300">Cavalo de Tróia</p>
+                    </div>
+                    <button id="playPauseBtn" class="text-white bg-blue-500 hover:bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                </div>
+
+                <div class="progress-bar rounded-full mb-2">
+                    <div id="progress" class="progress rounded-full"></div>
+                </div>
+
+                <div class="flex justify-between text-xs text-gray-400">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">3:45</span>
+                </div>
+
+                <audio id="audioPlayer" autoplay>
+                    <source src="http://som.brasilplaygames.com.br/som/MC Kevin anonimato.mp3" type="audio/mpeg" />
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const audioPlayer = document.getElementById("audioPlayer");
+                const playPauseBtn = document.getElementById("playPauseBtn");
+                const progress = document.getElementById("progress");
+                const currentTime = document.getElementById("currentTime");
+                const duration = document.getElementById("duration");
+
+                duration.textContent = "3:45";
+
+                playPauseBtn.addEventListener("click", function () {
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                        playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    } else {
+                        audioPlayer.pause();
+                        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
                 });
-            }, 500);
-        });
-    </script>
-    <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=SULISTAXY/sulista-perfil" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p>
-</body>
+
+                audioPlayer.addEventListener("timeupdate", function () {
+                    const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                    progress.style.width = percent + "%";
+
+                    const minutes = Math.floor(audioPlayer.currentTime / 60);
+                    const seconds = Math.floor(audioPlayer.currentTime % 60);
+                    currentTime.textContent = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+
+                    if (audioPlayer.duration !== Infinity && !isNaN(audioPlayer.duration)) {
+                        const durMinutes = Math.floor(audioPlayer.duration / 60);
+                        const durSeconds = Math.floor(audioPlayer.duration % 60);
+                        duration.textContent = durMinutes + ":" + (durSeconds < 10 ? "0" + durSeconds : durSeconds);
+                    }
+                });
+
+                const progressBar = document.querySelector(".progress-bar");
+                progressBar.addEventListener("click", function (e) {
+                    const percent = e.offsetX / this.offsetWidth;
+                    audioPlayer.currentTime = percent * audioPlayer.duration;
+                });
+
+                audioPlayer.addEventListener("ended", function () {
+                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    progress.style.width = "0%";
+                    currentTime.textContent = "0:00";
+                });
+
+                setTimeout(() => {
+                    audioPlayer.play().catch((e) => {
+                        console.log("Autoplay prevented. Please interact with the page to play audio.");
+                        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    });
+                }, 500);
+            });
+        </script>
+    </body>
 </html>
