@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil da Tropa da Água</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #80deea 50%, #4dd0e1 100%);
+            min-height: 100vh;
+        }
+        
+        .wave-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: -1;
+        }
+        
+        .wave-bg svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        
+        .wave-bg .shape-fill {
+            fill: rgba(255, 255, 255, 0.3);
+        }
+        
+        .music-player {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .profile-card {
+            box-shadow: 0 10px 30px rgba(0, 150, 200, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 150, 200, 0.3);
+        }
+        
+        .schedule-item {
+            transition: all 0.3s ease;
+        }
+        
+        .schedule-item:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.8) !important;
+        }
+        
+        .member-card {
+            transition: all 0.3s ease;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: #00bcd4;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+        
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="wave-bg">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,931.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Profile Header -->
+        <div class="profile-card bg-white rounded-3xl overflow-hidden mb-8">
+            <div class="relative h-48 bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center">
+                <div class="absolute inset-0 bg-black opacity-20"></div>
+                <div class="relative z-10 text-center">
+                    <div class="w-24 h-24 mx-auto rounded-full border-4 border-white shadow-lg overflow-hidden bg-white">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Foto do líder" class="w-full h-full object-cover">
+                    </div>
+                    <h1 class="text-2xl font-bold text-white mt-4">Tropa da Água 🍁</h1>
+                    <div class="flex items-center justify-center mt-2">
+                        <i class="fas fa-map-marker-alt text-white mr-2"></i>
+                        <span class="text-white">Paraná, Brasil</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h2 class="text-xl font-semibold text-cyan-800">Sobre nós</h2>
+                        <p class="text-gray-600 mt-1">TROPA DA ÁGUA 🍁</p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center hover:bg-cyan-200 transition">
+                        	<a href="https://chat.whatsapp.com/Gwux5tUDMXb5j3vrBtcTkv?fbclid=PAQ0xDSwKHLiJleHRuA2FlbQIxMQABp70UjpsZt-DOLwgKNa7YHj6-unZAQq7hiJjVPDXgFYtJvFUmL7wpRD9-7vGw_aem_muJuMxPjdtqbK5nTD0zZ7g" target="_blank" class="social-icon text-red-500 hover:text-red-400 text-2xl">
+                                <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-4 text-center">
+                	<div class="bg-cyan-50 p-3 rounded-xl">
+                        <div class="text-cyan-600 font-bold text-xl">40</div>
+                        <div class="text-gray-500 text-sm">Membros</div>
+                    </div>
+                    <div class="bg-cyan-50 p-3 rounded-xl">
+                        <div class="text-cyan-600 font-bold text-xl">23:00</div>
+                        <div class="text-gray-500 text-sm">Horário</div>
+                    </div>
+                    <div class="bg-cyan-50 p-3 rounded-xl">
+                        <div class="text-cyan-600 font-bold text-xl">Seg-Sex</div>
+                        <div class="text-gray-500 text-sm">Dias</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Music Player -->
+        <div class="music-player rounded-2xl p-6 mb-8">
+            <h2 class="text-xl font-semibold text-cyan-800 mb-4">TROPA DA ÁGUA 🍁</h2>
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
+                        <img src="https://i.scdn.co/image/ab67616d0000b273a2eec11860faa68906e8e9c1" alt="Capa do álbum" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium">Mc Kevin - Cavalo de Tróia</h3>
+                        <p class="text-sm text-gray-500"></p>
+                    </div>
+                    <button id="play-btn" class="w-12 h-12 rounded-full bg-cyan-500 text-white flex items-center justify-center hover:bg-cyan-600 transition ripple-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+                
+                <div class="mt-4 flex items-center">
+                    <span class="text-xs text-gray-500 mr-2" id="current-time">0:00</span>
+                    <div class="flex-1 progress-bar rounded-full overflow-hidden">
+                        <div class="progress-fill" id="progress-bar"></div>
+                    </div>
+                    <span class="text-xs text-gray-500 ml-2" id="duration">3:45</span>
+                </div>
+                
+                <audio id="audio-player" src="http://som.brasilplaygames.com.br/som/MC Kevin anonimato.mp3"></audio>
+            </div>
+        </div>
+        
+        <!-- Schedule -->
+        <div class="bg-white rounded-2xl p-6 mb-8 shadow-sm">
+            <h2 class="text-xl font-semibold text-cyan-800 mb-4">Horário de encontro</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
+                <div class="schedule-item bg-cyan-50 p-3 rounded-lg text-center">
+                    <div class="text-sm text-gray-500">Segunda</div>
+                    <div class="font-medium text-cyan-600">23:00</div>
+                </div>
+                <div class="schedule-item bg-cyan-50 p-3 rounded-lg text-center">
+                    <div class="text-sm text-gray-500">Terça</div>
+                    <div class="font-medium text-cyan-600">23:00</div>
+                </div>
+                <div class="schedule-item bg-cyan-50 p-3 rounded-lg text-center">
+                    <div class="text-sm text-gray-500">Quarta</div>
+                    <div class="font-medium text-cyan-600">23:00</div>
+                </div>
+                <div class="schedule-item bg-cyan-50 p-3 rounded-lg text-center">
+                    <div class="text-sm text-gray-500">Quinta</div>
+                    <div class="font-medium text-cyan-600">23:00</div>
+                </div>
+                <div class="schedule-item bg-cyan-50 p-3 rounded-lg text-center">
+                    <div class="text-sm text-gray-500">Sexta</div>
+                    <div class="font-medium text-cyan-600">23:00</div>
+                </div>
+            </div>
+            
+            <div class="mt-4 p-3 bg-blue-50 rounded-lg flex items-center">
+                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="text-sm text-blue-800">
+                    Nos encontramos sempre às 23:00 de segunda a sexta no porto dos padres(CC).
+                </div>
+            </div>
+        </div>
+    
+    <script>
+        // Music Player Functionality
+        const audioPlayer = document.getElementById('audio-player');
+        const playBtn = document.getElementById('play-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        
+        let isPlaying = false;
+        
+        // Format time (seconds to MM:SS)
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+        
+        // Update progress bar
+        function updateProgressBar() {
+            const { currentTime, duration } = audioPlayer;
+            const progressPercent = (currentTime / duration) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+            currentTimeEl.textContent = formatTime(currentTime);
+        }
+        
+        // Set song duration on load
+        audioPlayer.addEventListener('loadedmetadata', () => {
+            durationEl.textContent = formatTime(audioPlayer.duration);
+        });
+        
+        // Update progress bar as song plays
+        audioPlayer.addEventListener('timeupdate', updateProgressBar);
+        
+        // Click on progress bar to seek
+        progressBar.parentElement.addEventListener('click', (e) => {
+            const width = progressBar.parentElement.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audioPlayer.duration;
+            audioPlayer.currentTime = (clickX / width) * duration;
+        });
+        
+        // Play/Pause button
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audioPlayer.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                audioPlayer.play();
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Song ended
+        audioPlayer.addEventListener('ended', () => {
+            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            progressBar.style.width = '0%';
+            currentTimeEl.textContent = '0:00';
+            isPlaying = false;
+        });
+        
+        // Ripple effect for buttons
+        document.querySelectorAll('.ripple-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+        
+        // Current day highlight
+        const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+        const today = new Date().getDay();
+        
+        // Highlight only Monday to Friday (1-5)
+        if (today >= 1 && today <= 5) {
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            scheduleItems[today - 1].classList.add('bg-cyan-100', 'border', 'border-cyan-300');
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=SULISTAXY/gua" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
